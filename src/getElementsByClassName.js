@@ -8,3 +8,4 @@ var getElementsByClassName = function(className
 ) {
   // your code here
 };
+// we worked all day
