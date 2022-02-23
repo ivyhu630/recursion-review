@@ -5,8 +5,10 @@
 
 var stringifyJSON = function(obj) {
   // your code goes here
-  // I : string, object, Array, null, boolean
-  // null
+  // I : string, object, Array, null, boolean, null
+  // O : result String or Array
+  // E : an array has array elements obj = [[1],2,[3,4]], an array has object elements obj = [{ 1 : 2},3], an array has both.
+
   if (obj === null) {
     return 'null';
   }
@@ -21,7 +23,7 @@ var stringifyJSON = function(obj) {
   }
 
   // check for array
-  if (Array.isArray(obj)) { //obj = [[1],2,[3,4]] //obj = [{ 1 : 2},3]
+  if (Array.isArray(obj)) {
     // check the array is empty or the length is zero.
     var res = '';
     res += '[';
@@ -44,8 +46,4 @@ var stringifyJSON = function(obj) {
   }
 
 
-
-   //Arrays.isArray(obj)
-  // O : result string
-  // E : an array has array elements, an array has object elements, an array has both.
 };
